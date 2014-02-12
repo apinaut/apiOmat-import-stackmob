@@ -13,7 +13,7 @@ from _pyio import BytesIO
 import gzip
 import re
 
-baseURL =  "https://apiomat.org/yambas/rest"
+baseURL = "https://apiomat.org/yambas/rest"
 apiKey = None
 system = "LIVE"
 userMail = None
