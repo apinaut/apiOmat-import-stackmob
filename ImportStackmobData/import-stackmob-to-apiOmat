@@ -366,7 +366,8 @@ def createData(objects, objectName):
          if response.getcode() == 201:
             print "# Sucessfully added data row to ", objectName, " #"
             objHref =  response.info().getheader("Location")
-            objs[dataObj['foreignId']] = objHref
+            if 'foreignId' in dataObj:
+               objs[dataObj['foreignId']] = objHref
             if tup:
                references.append( {"objHref": objHref, "refObj" : tup })
       except urllib2.HTTPError,error:
