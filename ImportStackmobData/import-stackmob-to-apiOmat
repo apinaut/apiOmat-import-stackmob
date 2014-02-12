@@ -360,7 +360,6 @@ def createData(objects, objectName):
          #set default password for user
          dataObj['password'] = defaultPwd
       postData = json.dumps( dataObj )
-      print "JSON: %s" % repr(postData)
       req = urllib2.Request(href, postData, headers)
       try:
          response = urllib2.urlopen(req)
